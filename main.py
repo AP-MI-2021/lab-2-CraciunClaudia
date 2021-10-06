@@ -11,9 +11,9 @@ def is_palindrome(n):
         ogl=ogl * 10 + n % 10
         n = n / 10
     if x == ogl :
-        print(f'Numarul este palindrom')
+        return True
     elif x !=ogl :
-        print(f'Numarul nu este palindrom')
+        return False
 
 def get_base_2(n: str):
     '''
@@ -45,6 +45,7 @@ def get_n_choose_k(n: int , k: int):
 
     for i in range (1,n):
         x = x * i
+
     for i in range (1,k):
         y = y * i
 
@@ -52,7 +53,7 @@ def get_n_choose_k(n: int , k: int):
     for i in range (1,dif):
         z = z * i
     rez = ( x / (y * z))
-        return rez
+    return rez
 
 def test_is_palindrome():
     assert is_palindrome(2332) == True
@@ -69,7 +70,7 @@ def test_get_n_choose_k():
     assert test_get_n_choose_k(5,7) == 21
 
 def main ():
-    while true :
+    while True:
         print ('1.Numar palindrom')
         print ('2.Transformarea din baza 10 in baza 2')
         print ('3.Combinari de n luate cate k')
@@ -78,7 +79,8 @@ def main ():
 
         if optiune == 1:
             nr = int (input ("\n introduceti un numar :"))
-            print (is_palindrome(nr))
+            palindrom = is_palindrome(nr)
+            print (f'Numarul {nr} este {palindrom} ')
         if optiune == 2:
             nr = int (input ("\n introduceti un numar :"))
             print (get_base_2(nr))
@@ -88,4 +90,4 @@ def main ():
             print (get_n_choose_k(combinari1,combinari2))
         if optiune == 4:
             break
-        main()
+    main()
