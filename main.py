@@ -90,4 +90,7 @@ def main ():
             print (get_n_choose_k(combinari1,combinari2))
         if optiune == 4:
             break
+test_is_palindrome()
+test_get_base_2()
+test_get_n_choose_k()
 main()
