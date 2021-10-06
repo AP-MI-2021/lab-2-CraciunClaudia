@@ -67,3 +67,25 @@ def test_get_base_2():
 
 def test_get_n_choose_k():
     assert test_get_n_choose_k(5,7) == 21
+
+def main ():
+    while true :
+        print ('1.Numar palindrom')
+        print ('2.Transformarea din baza 10 in baza 2')
+        print ('3.Combinari de n luate cate k')
+        print ('4.Iesire')
+        optiune = int (input("selectati optiunea:"))
+
+        if optiune == 1:
+            nr = int (input ("\n introduceti un numar :"))
+            print (is_palindrome(nr))
+        if optiune == 2:
+            nr = int (input ("\n introduceti un numar :"))
+            print (get_base_2(nr))
+        if optiune == 3:
+            combinari1 = int (input ("\n Introduceti un numar pentru n: "))
+            combinari2 = int (input ("\n Itroduceti un numar pentru numar pentru k"))
+            print (get_n_choose_k(combinari1,combinari2))
+        if optiune == 4:
+            break
+        main()
