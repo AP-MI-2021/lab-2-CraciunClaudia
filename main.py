@@ -90,4 +90,4 @@ def main ():
             print (get_n_choose_k(combinari1,combinari2))
         if optiune == 4:
             break
-    main()
+main()
